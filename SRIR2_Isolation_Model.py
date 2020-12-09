@@ -65,7 +65,10 @@ plt.plot(RES[:, 2], color='r', label='传染者——Infection')
 plt.plot(RES[:, 3], color='b', label='康复者——Recover')
 plt.axvline(x=10, ls='--')
 plt.title('戒严措施影响SEIR Model(Exposed可传染)')
-plt.legend()
+plt.legend(loc='best')
 plt.xlabel('天数')
 plt.ylabel('人数')
+plt.annotate(r'开始戒严', xy=(10, 4500), xycoords='data', xytext=(+30, -30), textcoords='offset points',
+             fontsize=10, arrowprops=dict(arrowstyle='->', connectionstyle='arc3,rad=.2'))
 plt.show()
+
